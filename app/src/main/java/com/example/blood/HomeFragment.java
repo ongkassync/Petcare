@@ -1,6 +1,5 @@
 package com.example.blood;
 
-import static com.example.blood.R.id.sphynx;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -57,15 +56,10 @@ public class HomeFragment extends Fragment {
         return fragment;
     }
 
-    public CardView persian, birman, siamese, scottish, burmese,sphynx;
-    public Button button;
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
         if (getArguments() != null) {
@@ -81,81 +75,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-
-        button = view.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Button.class);
-                startActivity(i);
-
-            }
-        });
-
-
-        persian = (CardView) view.findViewById(R.id.persian);
-        persian.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Persian.class);
-                startActivity(i);
-            }
-        });
-
-        birman = (CardView) view.findViewById(R.id.birman);
-        birman.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Persian.class);
-                startActivity(i);
-
-            }
-        });
-
-        siamese = (CardView) view.findViewById(R.id.siamese);
-        siamese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Siamese.class);
-                startActivity(i);
-
-            }
-        });
-
-        scottish = (CardView) view.findViewById(R.id.scottish);
-        scottish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Scottish.class);
-                startActivity(i);
-            }
-        });
-
-        burmese= (CardView) view.findViewById(R.id.burmese);
-        burmese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Burmese.class);
-                startActivity(i);
-            }
-        });
-
-        sphynx= (CardView) view.findViewById(R.id.sphynx);
-        sphynx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), Sphynx.class);
-                startActivity(i);
-            }
-        });
-
-
         return view;
-    }
-    public void openActivity2(){
-        Intent i = new Intent(getActivity(), Button.class);
-        startActivity(i);
     }
 
 }

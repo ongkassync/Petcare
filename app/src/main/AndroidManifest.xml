@@ -16,34 +16,10 @@
         android:theme="@style/Theme.Blood"
         tools:targetApi="31">
 
-
-        <activity
-            android:name=".Sphynx"
-            android:exported="false" />
-        <activity
-            android:name=".Persian"
-            android:exported="false" />
-        <activity
-            android:name=".Scottish"
-            android:exported="false" />
-        <activity
-            android:name=".Birman"
-            android:exported="false" />
-        <activity
-            android:name=".Burmese"
-            android:exported="false" />
-        <activity
-            android:name=".Siamese"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-        <activity
-            android:name=".Button"
-            android:exported="false" />
-        <activity
-            android:name=".bottom_Nav"
-            android:exported="false" />
+
         <activity
             android:name=".DrawerNavigation"
             android:exported="false" />

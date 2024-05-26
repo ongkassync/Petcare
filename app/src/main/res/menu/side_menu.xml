@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/Dashboard"
+        android:title="Dashboard"/>
+
+    <item android:title="Online Platforms">
+        <menu>
+            <item android:id="@+id/class_sched"
+                android:title="Class Schedule"/>
+
+            <item android:id="@+id/enroll_course"
+                android:title="Enroll Course"/>
+        </menu>
+    </item>
+
+    <item android:title="Cashiers">
+        <menu>
+            <item android:id="@+id/payments"
+                android:title="Payments"/>
+
+            <item android:id="@+id/payments_history"
+                android:title="Payments History"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/account"
+        android:title="Account"/>
+
+    <item android:id="@+id/settings"
+        android:title="Settings"/>
+
+
+</menu>

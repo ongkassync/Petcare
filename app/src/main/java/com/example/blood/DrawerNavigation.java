@@ -25,6 +25,7 @@ public class DrawerNavigation extends AppCompatActivity implements NavigationVie
     private DrawerLayout drawerLayout;
     private Fragment fragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,23 +52,6 @@ public class DrawerNavigation extends AppCompatActivity implements NavigationVie
         //Open the home fragment when the app opens
         repFragment(new HomeFragment());
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
-
-
-        //Bottom Navigation Method
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-
-            int itemId = item.getItemId();
-            if (itemId == R.id.home) {
-                repFragment(new HomeFragment());
-            } else if (itemId == R.id.profile) {
-                repFragment(new ProfileFragment());
-            } else if (itemId == R.id.settings) {
-                repFragment(new SettingsFragment());
-            }
-
-            return true;
-        });
 
     }
 
@@ -75,19 +59,24 @@ public class DrawerNavigation extends AppCompatActivity implements NavigationVie
     //method for interchanging menus in side navigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
         int itemId = item.getItemId();
-
-        if (itemId == R.id.nav_profile) {
-            repFragment(new SideProfileFragment());
-        } else if (itemId == R.id.nav_account) {
-            repFragment(new SideAccountFragment());
-        } else if (itemId == R.id.nav_notification) {
-            repFragment(new SideNotificationFragment());
-        } else if (itemId == R.id.nav_settings) {
-            repFragment(new SideSettingsFragment());
+        if (itemId == R.id.Dashboard) {
+            repFragment(new HomeFragment());
+        } else if (itemId == R.id.class_sched) {
+            repFragment(new ClassScheduleFragment());
+        } else if (itemId == R.id.enroll_course) {
+            repFragment(new EnrollCourseFragment());
+        } else if (itemId == R.id.payments) {
+            repFragment(new PaymentFragment());
+        } else if (itemId == R.id.payments_history) {
+            repFragment(new PaymentHistoryFragment());
+        } else if (itemId == R.id.account) {
+            repFragment(new AccountFragment());
+        } else if (itemId == R.id.settings) {
+            repFragment(new SettingsFragment());
+        } else {
+            return false;
         }
-
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
